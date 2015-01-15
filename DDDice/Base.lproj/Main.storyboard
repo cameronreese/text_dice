@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DDDice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,293 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMF-XP-DL8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="64"/>
+                                <state key="normal" title="D3">
+                                    <color key="titleColor" red="1" green="0.16247106481481483" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="63" y="424" width="106" height="111"/>
+                                </variation>
+                                <connections>
+                                    <action selector="diceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iNP-e5-Af1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3br-Iv-2Y3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="64"/>
+                                <state key="normal" title="D4">
+                                    <color key="titleColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="240" y="424" width="117" height="111"/>
+                                </variation>
+                                <connections>
+                                    <action selector="diceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DQb-lL-1zp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwb-el-lrD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="64"/>
+                                <state key="normal" title="D6">
+                                    <color key="titleColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="420" y="424" width="130" height="111"/>
+                                </variation>
+                                <connections>
+                                    <action selector="diceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="A63-fS-sr0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iER-MG-IQd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="64"/>
+                                <state key="normal" title="D8">
+                                    <color key="titleColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="63" y="555" width="107" height="111"/>
+                                </variation>
+                                <connections>
+                                    <action selector="diceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YUL-Ew-dQF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKp-ii-cRw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="64"/>
+                                <state key="normal" title="D10">
+                                    <color key="titleColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="240" y="555" width="112" height="111"/>
+                                </variation>
+                                <connections>
+                                    <action selector="diceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="14h-2K-KfI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzh-5q-ZYa">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="64"/>
+                                <state key="normal" title="D12">
+                                    <color key="titleColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="412" y="555" width="138" height="111"/>
+                                </variation>
+                                <connections>
+                                    <action selector="diceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rK9-mO-2jt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8F-wk-3J0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="64"/>
+                                <state key="normal" title="D20">
+                                    <color key="titleColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="52" y="662" width="128" height="111"/>
+                                </variation>
+                                <connections>
+                                    <action selector="diceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PBL-uD-65U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CS-Ju-Nop">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="36"/>
+                                <state key="normal" title="CLEAR">
+                                    <color key="titleColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="388" y="305" width="179" height="111"/>
+                                </variation>
+                                <connections>
+                                    <action selector="clearLogButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j3Q-kT-XkJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlZ-bb-hRE">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="42"/>
+                                <color key="textColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="20" width="167" height="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mz0-9u-Hp7">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="54"/>
+                                <color key="textColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="400" y="20" width="167" height="84"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJx-xM-ZJ9">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="108"/>
+                                <color key="textColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="388" y="90" width="191" height="214"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kk9-ac-7gx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="64"/>
+                                <state key="normal" title="D100">
+                                    <color key="titleColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="219" y="662" width="154" height="111"/>
+                                </variation>
+                                <connections>
+                                    <action selector="diceButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qu5-Ua-pHX"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yal-xQ-aYe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQW-Xz-pt1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAm-tD-VOE">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
+                                                <color key="textColor" red="1" green="0.16247106480000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="6" y="7" width="333" height="48"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxd-ZS-efV">
+                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="153" y="300" width="42" height="21"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Fxd-ZS-efV" firstAttribute="top" secondItem="MAm-tD-VOE" secondAttribute="bottom" constant="245" id="1eQ-5p-fqf"/>
+                                            <constraint firstItem="MAm-tD-VOE" firstAttribute="width" secondItem="wQW-Xz-pt1" secondAttribute="width" id="ASt-Nn-eoF"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="MAm-tD-VOE"/>
+                                                <exclude reference="Fxd-ZS-efV"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="ASt-Nn-eoF"/>
+                                                <exclude reference="1eQ-5p-fqf"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="349" height="338"/>
+                                            <mask key="subviews">
+                                                <include reference="MAm-tD-VOE"/>
+                                                <include reference="Fxd-ZS-efV"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="ASt-Nn-eoF"/>
+                                                <include reference="1eQ-5p-fqf"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wQW-Xz-pt1" secondAttribute="bottom" id="3ag-t6-HYK"/>
+                                    <constraint firstItem="wQW-Xz-pt1" firstAttribute="leading" secondItem="Yal-xQ-aYe" secondAttribute="leading" id="4u0-uM-A0d"/>
+                                    <constraint firstAttribute="trailing" secondItem="wQW-Xz-pt1" secondAttribute="trailing" id="beJ-J2-sKR"/>
+                                    <constraint firstItem="wQW-Xz-pt1" firstAttribute="width" secondItem="Yal-xQ-aYe" secondAttribute="width" id="j3s-4B-yVY"/>
+                                    <constraint firstItem="wQW-Xz-pt1" firstAttribute="top" secondItem="Yal-xQ-aYe" secondAttribute="top" id="mlR-wm-Q5h"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="wQW-Xz-pt1"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="3ag-t6-HYK"/>
+                                        <exclude reference="4u0-uM-A0d"/>
+                                        <exclude reference="beJ-J2-sKR"/>
+                                        <exclude reference="j3s-4B-yVY"/>
+                                        <exclude reference="mlR-wm-Q5h"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="24" y="78" width="349" height="338"/>
+                                    <mask key="subviews">
+                                        <include reference="wQW-Xz-pt1"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="3ag-t6-HYK"/>
+                                        <include reference="4u0-uM-A0d"/>
+                                        <include reference="beJ-J2-sKR"/>
+                                        <include reference="j3s-4B-yVY"/>
+                                        <include reference="mlR-wm-Q5h"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97242221738122347" blue="0.87455319493833572" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="LMF-XP-DL8"/>
+                                <exclude reference="3br-Iv-2Y3"/>
+                                <exclude reference="iwb-el-lrD"/>
+                                <exclude reference="iER-MG-IQd"/>
+                                <exclude reference="iKp-ii-cRw"/>
+                                <exclude reference="jzh-5q-ZYa"/>
+                                <exclude reference="V8F-wk-3J0"/>
+                                <exclude reference="9CS-Ju-Nop"/>
+                                <exclude reference="dlZ-bb-hRE"/>
+                                <exclude reference="Mz0-9u-Hp7"/>
+                                <exclude reference="VJx-xM-ZJ9"/>
+                                <exclude reference="Kk9-ac-7gx"/>
+                                <exclude reference="Yal-xQ-aYe"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="LMF-XP-DL8"/>
+                                <include reference="3br-Iv-2Y3"/>
+                                <include reference="iwb-el-lrD"/>
+                                <include reference="iER-MG-IQd"/>
+                                <include reference="iKp-ii-cRw"/>
+                                <include reference="jzh-5q-ZYa"/>
+                                <include reference="V8F-wk-3J0"/>
+                                <include reference="9CS-Ju-Nop"/>
+                                <include reference="dlZ-bb-hRE"/>
+                                <include reference="Mz0-9u-Hp7"/>
+                                <include reference="VJx-xM-ZJ9"/>
+                                <include reference="Kk9-ac-7gx"/>
+                                <include reference="Yal-xQ-aYe"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="currentRollDisplayLabel" destination="VJx-xM-ZJ9" id="VaV-fe-pfU"/>
+                        <outlet property="logLabel" destination="MAm-tD-VOE" id="shR-0E-LBb"/>
+                        <outlet property="logScrollView" destination="Yal-xQ-aYe" id="rCp-T0-YNI"/>
+                        <outlet property="logView" destination="wQW-Xz-pt1" id="dNV-xs-6YZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="406" y="366.75"/>
         </scene>
     </scenes>
 </document>
