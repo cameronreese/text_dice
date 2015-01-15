@@ -14,11 +14,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var diceButton: UIButton!
     
-    @IBOutlet var logScrollView: UIScrollView!
-    
-    @IBOutlet weak var logView: UIView!
+    @IBOutlet weak var logContentView: UIView!
     
     @IBOutlet weak var logLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +25,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         currentRollDisplayLabel.text = ""
         logLabel.text = "------------"
         logLabel.sizeToFit()
+        logContentView.sizeToFit()
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,6 +71,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             let newLogText = "\(diceLabel): \(diceRollResult)\n" + currentLogText
             logLabel.text = newLogText
             logLabel.sizeToFit()
+            logContentView.sizeToFit()
         }
         
     }
@@ -79,7 +80,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         currentRollDisplayLabel.text = "~"
         logLabel.text = "------------"
         logLabel.sizeToFit()
-       // logLabel.numberOfLines = 0
+        logContentView.sizeToFit()
+        //logLabel.numberOfLines = 0
         
     }
 
