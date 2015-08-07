@@ -3,7 +3,7 @@
 //  DDDice
 //
 //  Created by Cameron Reese on 1/14/15.
-//  Copyright (c) 2015 Camian. All rights reserved.
+//  Copyright (c) 2015 Cameron Reese. All rights reserved.
 //
 
 import UIKit
@@ -14,18 +14,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var diceButton: UIButton!
     
-    @IBOutlet weak var logContentView: UIView!
-    
-    @IBOutlet weak var logLabel: UILabel!
-    
+    @IBOutlet weak var logTextBox: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        currentRollDisplayLabel.text = ""
-        logLabel.text = "------------"
-        logLabel.sizeToFit()
-        logContentView.sizeToFit()
+        currentRollDisplayLabel.text = "~"
+        logTextBox.text = "--------"
+        logTextBox.editable = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,21 +35,21 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         var numberOfDiceSides: Int
         
         // determine which dice button was pressed and change numberOfDiceSides appropriately
-        if (sender.titleLabel?.text == "D3") {
+        if (sender.titleLabel?.text == "d3") {
             numberOfDiceSides = 3 }
-        else if (sender.titleLabel?.text == "D4") {
+        else if (sender.titleLabel?.text == "d4") {
             numberOfDiceSides = 4 }
-        else if (sender.titleLabel?.text == "D6") {
+        else if (sender.titleLabel?.text == "d6") {
             numberOfDiceSides = 6 }
-        else if (sender.titleLabel?.text == "D8") {
+        else if (sender.titleLabel?.text == "d8") {
             numberOfDiceSides = 8 }
-        else if (sender.titleLabel?.text == "D10") {
+        else if (sender.titleLabel?.text == "d10") {
             numberOfDiceSides = 10 }
-        else if (sender.titleLabel?.text == "D12") {
+        else if (sender.titleLabel?.text == "d12") {
             numberOfDiceSides = 12 }
-        else if (sender.titleLabel?.text == "D20") {
+        else if (sender.titleLabel?.text == "d20") {
             numberOfDiceSides = 20 }
-        else if (sender.titleLabel?.text == "D100") {
+        else if (sender.titleLabel?.text == "d100") {
             numberOfDiceSides = 100 }
         else {
             numberOfDiceSides = 0 }
@@ -63,27 +59,27 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
         currentRollDisplayLabel.text = String(diceRollResult)
         
-        // add line to log and input new results to the top
-        //logLabel.numberOfLines++
+        
         if let diceLabel = sender.titleLabel?.text! {
-            //print("\(diceLabel): \(diceRollResult)\n" + logLabel.text!)
-            var currentLogText = logLabel.text!
+            var currentLogText = logTextBox.text!
             let newLogText = "\(diceLabel): \(diceRollResult)\n" + currentLogText
-            logLabel.text = newLogText
-            logLabel.sizeToFit()
-            logContentView.sizeToFit()
+            logTextBox.text = newLogText
         }
         
     }
     
+
+    // function to clear out the log and main roll display
     @IBAction func clearLogButtonPressed(sender: UIButton) {
         currentRollDisplayLabel.text = "~"
-        logLabel.text = "------------"
-        logLabel.sizeToFit()
-        logContentView.sizeToFit()
-        //logLabel.numberOfLines = 0
-        
+        logTextBox.text = "--------"
     }
-
+    
+    @IBAction func addBreakInLog(sender: UIButton) {
+        var currentLogText = logTextBox.text!
+        let newLogText = "--------\n" + currentLogText
+        logTextBox.text = newLogText
+        currentRollDisplayLabel.text = "~"
+    }
 }
 
