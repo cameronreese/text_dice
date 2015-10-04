@@ -55,13 +55,13 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             numberOfDiceSides = 0 }
         
         // find a random number based on number of sides
-        var diceRollResult = Int(arc4random_uniform(UInt32(numberOfDiceSides))) + 1
+        let diceRollResult = Int(arc4random_uniform(UInt32(numberOfDiceSides))) + 1
 
         currentRollDisplayLabel.text = String(diceRollResult)
         
         
         if let diceLabel = sender.titleLabel?.text! {
-            var currentLogText = logTextBox.text!
+            let currentLogText = logTextBox.text!
             let newLogText = "\(diceLabel): \(diceRollResult)\n" + currentLogText
             logTextBox.text = newLogText
         }
@@ -76,7 +76,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func addBreakInLog(sender: UIButton) {
-        var currentLogText = logTextBox.text!
+        let currentLogText = logTextBox.text!
         let newLogText = "--------\n" + currentLogText
         logTextBox.text = newLogText
         currentRollDisplayLabel.text = "~"
