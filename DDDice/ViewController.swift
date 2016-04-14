@@ -2,17 +2,18 @@
 //  ViewController.swift
 //  DDDice
 //
-//  Created by Cameron Reese on 1/14/15.
-//  Copyright (c) 2015 Cameron Reese. All rights reserved.
-//
 
 import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
     
+    var notBreaked = false
+    
     @IBOutlet weak var currentRollDisplayLabel: UILabel!
 
     @IBOutlet weak var diceButton: UIButton!
+    
+    @IBOutlet weak var sumLabel: UILabel!
     
     @IBOutlet weak var logTextBox: UITextView!
     
@@ -31,6 +32,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     
     @IBAction func diceButtonPressed(sender: UIButton) {
+        
+        notBreaked = true
         
         var numberOfDiceSides: Int
         
@@ -66,19 +69,26 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             logTextBox.text = newLogText
         }
         
+        
     }
     
 
     // function to clear out the log and main roll display
     @IBAction func clearLogButtonPressed(sender: UIButton) {
+        notBreaked = false
         currentRollDisplayLabel.text = "~"
         logTextBox.text = "--------"
     }
     
     @IBAction func addBreakInLog(sender: UIButton) {
         let currentLogText = logTextBox.text!
-        let newLogText = "--------\n" + currentLogText
-        logTextBox.text = newLogText
+        if notBreaked {
+            let newLogText = "--------\n" + currentLogText
+            logTextBox.text = newLogText
+            notBreaked = false
+        }
+        
+        
         currentRollDisplayLabel.text = "~"
     }
 }
