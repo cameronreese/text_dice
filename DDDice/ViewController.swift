@@ -9,6 +9,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     var notBreaked = false
     
+    var runningSum = 0
+    
     @IBOutlet weak var currentRollDisplayLabel: UILabel!
 
     @IBOutlet weak var diceButton: UIButton!
@@ -62,6 +64,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
         currentRollDisplayLabel.text = String(diceRollResult)
         
+        runningSum += diceRollResult
+        
+        sumLabel.text = "Sum: " + String(runningSum)
+        
         
         if let diceLabel = sender.titleLabel?.text! {
             let currentLogText = logTextBox.text!
@@ -76,20 +82,28 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     // function to clear out the log and main roll display
     @IBAction func clearLogButtonPressed(sender: UIButton) {
         notBreaked = false
+        runningSum = 0
         currentRollDisplayLabel.text = "~"
         logTextBox.text = "--------"
+        sumLabel.text = "Sum: "
+
     }
     
     @IBAction func addBreakInLog(sender: UIButton) {
+        
+        runningSum = 0
+        
         let currentLogText = logTextBox.text!
         if notBreaked {
             let newLogText = "--------\n" + currentLogText
             logTextBox.text = newLogText
             notBreaked = false
         }
-        
+        sumLabel.text = "Sum: "
         
         currentRollDisplayLabel.text = "~"
     }
+    
+    
 }
 
