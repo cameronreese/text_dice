@@ -61,7 +61,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         // find a random number based on number of sides
         let diceRollResult = Int(arc4random_uniform(UInt32(numberOfDiceSides))) + 1
-
+        
+        spinTheWheel(numberOfDiceSides)
+        
         currentRollDisplayLabel.text = String(diceRollResult)
         
         runningSum += diceRollResult
@@ -104,6 +106,29 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         currentRollDisplayLabel.text = "~"
     }
     
+    // function that randomly displays numbers from fast to slow
+    func spinTheWheel(max: Int) {
+        var timeSlice = 1.0
+        for tick in 1...10 {
+            
+            timeSlice = pow(2.0, Double(tick))
+            
+            delay(timeSlice / pow(2.0, 10.0)) {
+                dispatch_async(dispatch_get_main_queue()){
+                    self.currentRollDisplayLabel.text = String(Int(arc4random_uniform(UInt32(max))) + 1)
+                }
+            }
+        }
+    }
+    
+    func delay(delay: Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
     
 }
 
