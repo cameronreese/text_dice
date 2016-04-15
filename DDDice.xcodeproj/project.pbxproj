@@ -10,7 +10,6 @@
 		106A79FF1A66D28300D5B9AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A79FE1A66D28300D5B9AC /* AppDelegate.swift */; };
 		106A7A011A66D28300D5B9AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A7A001A66D28300D5B9AC /* ViewController.swift */; };
 		106A7A041A66D28300D5B9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106A7A021A66D28300D5B9AC /* Main.storyboard */; };
-		106A7A061A66D28300D5B9AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106A7A051A66D28300D5B9AC /* Images.xcassets */; };
 		106A7A091A66D28300D5B9AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 106A7A071A66D28300D5B9AC /* LaunchScreen.xib */; };
 		106A7A151A66D28300D5B9AC /* DDDiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A7A141A66D28300D5B9AC /* DDDiceTests.swift */; };
 		106A7A1F1A66E9CD00D5B9AC /* DiceLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A7A1E1A66E9CD00D5B9AC /* DiceLog.swift */; };
@@ -33,7 +32,6 @@
 		106A79FE1A66D28300D5B9AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		106A7A001A66D28300D5B9AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		106A7A031A66D28300D5B9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		106A7A051A66D28300D5B9AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		106A7A081A66D28300D5B9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		106A7A0E1A66D28300D5B9AC /* DDDiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDDiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		106A7A131A66D28300D5B9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				106A79FE1A66D28300D5B9AC /* AppDelegate.swift */,
 				106A7A001A66D28300D5B9AC /* ViewController.swift */,
 				106A7A021A66D28300D5B9AC /* Main.storyboard */,
-				106A7A051A66D28300D5B9AC /* Images.xcassets */,
 				106A7A071A66D28300D5B9AC /* LaunchScreen.xib */,
 				106A79FC1A66D28300D5B9AC /* Supporting Files */,
 				106A7A1E1A66E9CD00D5B9AC /* DiceLog.swift */,
@@ -204,7 +201,6 @@
 				106A7A041A66D28300D5B9AC /* Main.storyboard in Resources */,
 				106A7A091A66D28300D5B9AC /* LaunchScreen.xib in Resources */,
 				107E49E81CC1AB0000A59A78 /* Media.xcassets in Resources */,
-				106A7A061A66D28300D5B9AC /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
