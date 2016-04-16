@@ -12,8 +12,9 @@
 		106A7A041A66D28300D5B9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106A7A021A66D28300D5B9AC /* Main.storyboard */; };
 		106A7A091A66D28300D5B9AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 106A7A071A66D28300D5B9AC /* LaunchScreen.xib */; };
 		106A7A151A66D28300D5B9AC /* DDDiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A7A141A66D28300D5B9AC /* DDDiceTests.swift */; };
-		106A7A1F1A66E9CD00D5B9AC /* DiceLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A7A1E1A66E9CD00D5B9AC /* DiceLog.swift */; };
 		107E49E81CC1AB0000A59A78 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107E49E71CC1AB0000A59A78 /* Media.xcassets */; };
+		107E49EA1CC1D60C00A59A78 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107E49E91CC1D60C00A59A78 /* Launch Screen.storyboard */; };
+		107E49EC1CC1D8C000A59A78 /* 1242x2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 107E49EB1CC1D8C000A59A78 /* 1242x2208.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +37,9 @@
 		106A7A0E1A66D28300D5B9AC /* DDDiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDDiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		106A7A131A66D28300D5B9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		106A7A141A66D28300D5B9AC /* DDDiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDiceTests.swift; sourceTree = "<group>"; };
-		106A7A1E1A66E9CD00D5B9AC /* DiceLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceLog.swift; sourceTree = "<group>"; };
 		107E49E71CC1AB0000A59A78 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		107E49E91CC1D60C00A59A78 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		107E49EB1CC1D8C000A59A78 /* 1242x2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1242x2208.png; path = AppImages/Launch/1242x2208.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		106A79F01A66D28300D5B9AC = {
 			isa = PBXGroup;
 			children = (
+				107E49E91CC1D60C00A59A78 /* Launch Screen.storyboard */,
 				106A79FB1A66D28300D5B9AC /* DDDice */,
 				106A7A111A66D28300D5B9AC /* DDDiceTests */,
 				106A79FA1A66D28300D5B9AC /* Products */,
@@ -79,12 +82,12 @@
 		106A79FB1A66D28300D5B9AC /* DDDice */ = {
 			isa = PBXGroup;
 			children = (
+				107E49EB1CC1D8C000A59A78 /* 1242x2208.png */,
 				106A79FE1A66D28300D5B9AC /* AppDelegate.swift */,
 				106A7A001A66D28300D5B9AC /* ViewController.swift */,
 				106A7A021A66D28300D5B9AC /* Main.storyboard */,
 				106A7A071A66D28300D5B9AC /* LaunchScreen.xib */,
 				106A79FC1A66D28300D5B9AC /* Supporting Files */,
-				106A7A1E1A66E9CD00D5B9AC /* DiceLog.swift */,
 				107E49E71CC1AB0000A59A78 /* Media.xcassets */,
 			);
 			path = DDDice;
@@ -200,6 +203,8 @@
 			files = (
 				106A7A041A66D28300D5B9AC /* Main.storyboard in Resources */,
 				106A7A091A66D28300D5B9AC /* LaunchScreen.xib in Resources */,
+				107E49EA1CC1D60C00A59A78 /* Launch Screen.storyboard in Resources */,
+				107E49EC1CC1D8C000A59A78 /* 1242x2208.png in Resources */,
 				107E49E81CC1AB0000A59A78 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +225,6 @@
 			files = (
 				106A7A011A66D28300D5B9AC /* ViewController.swift in Sources */,
 				106A79FF1A66D28300D5B9AC /* AppDelegate.swift in Sources */,
-				106A7A1F1A66E9CD00D5B9AC /* DiceLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
