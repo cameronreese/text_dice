@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1019F3861CF3B0A5009BE767 /* DiceSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019F3851CF3B0A5009BE767 /* DiceSelectorRow.swift */; };
+		10305A891CF3D54700185CCE /* DiceRollController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10305A881CF3D54700185CCE /* DiceRollController.swift */; };
 		106A79FF1A66D28300D5B9AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A79FE1A66D28300D5B9AC /* AppDelegate.swift */; };
 		106A7A011A66D28300D5B9AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A7A001A66D28300D5B9AC /* ViewController.swift */; };
 		106A7A041A66D28300D5B9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106A7A021A66D28300D5B9AC /* Main.storyboard */; };
 		106A7A091A66D28300D5B9AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 106A7A071A66D28300D5B9AC /* LaunchScreen.xib */; };
 		106A7A151A66D28300D5B9AC /* DDDiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106A7A141A66D28300D5B9AC /* DDDiceTests.swift */; };
+		1072DABE1CC7DAA200DF8EA9 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1072DABC1CC7DAA200DF8EA9 /* Interface.storyboard */; };
+		1072DAC01CC7DAA200DF8EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1072DABF1CC7DAA200DF8EA9 /* Assets.xcassets */; };
+		1072DAC71CC7DAA200DF8EA9 /* DDDice Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1072DAC61CC7DAA200DF8EA9 /* DDDice Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1072DACC1CC7DAA200DF8EA9 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072DACB1CC7DAA200DF8EA9 /* InterfaceController.swift */; };
+		1072DACE1CC7DAA200DF8EA9 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072DACD1CC7DAA200DF8EA9 /* ExtensionDelegate.swift */; };
+		1072DAD01CC7DAA200DF8EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1072DACF1CC7DAA200DF8EA9 /* Assets.xcassets */; };
+		1072DAD41CC7DAA200DF8EA9 /* DDDice Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1072DABA1CC7DAA100DF8EA9 /* DDDice Watch App.app */; };
 		107E49E81CC1AB0000A59A78 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 107E49E71CC1AB0000A59A78 /* Media.xcassets */; };
 		107E49EA1CC1D60C00A59A78 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 107E49E91CC1D60C00A59A78 /* Launch Screen.storyboard */; };
 		107E49EC1CC1D8C000A59A78 /* 1242x2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 107E49EB1CC1D8C000A59A78 /* 1242x2208.png */; };
@@ -25,9 +34,50 @@
 			remoteGlobalIDString = 106A79F81A66D28300D5B9AC;
 			remoteInfo = DDDice;
 		};
+		1072DAC81CC7DAA200DF8EA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 106A79F11A66D28300D5B9AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1072DAC51CC7DAA200DF8EA9;
+			remoteInfo = "DDDice Watch App Extension";
+		};
+		1072DAD21CC7DAA200DF8EA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 106A79F11A66D28300D5B9AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1072DAB91CC7DAA100DF8EA9;
+			remoteInfo = "DDDice Watch App";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1072DADA1CC7DAA200DF8EA9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1072DAC71CC7DAA200DF8EA9 /* DDDice Watch App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1072DADC1CC7DAA200DF8EA9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1072DAD41CC7DAA200DF8EA9 /* DDDice Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1019F3851CF3B0A5009BE767 /* DiceSelectorRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceSelectorRow.swift; sourceTree = "<group>"; };
+		10305A881CF3D54700185CCE /* DiceRollController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceRollController.swift; sourceTree = "<group>"; };
 		106A79F91A66D28300D5B9AC /* DDDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		106A79FD1A66D28300D5B9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		106A79FE1A66D28300D5B9AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +87,15 @@
 		106A7A0E1A66D28300D5B9AC /* DDDiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDDiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		106A7A131A66D28300D5B9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		106A7A141A66D28300D5B9AC /* DDDiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDDiceTests.swift; sourceTree = "<group>"; };
+		1072DABA1CC7DAA100DF8EA9 /* DDDice Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DDDice Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1072DABD1CC7DAA200DF8EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1072DABF1CC7DAA200DF8EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1072DAC11CC7DAA200DF8EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1072DAC61CC7DAA200DF8EA9 /* DDDice Watch App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DDDice Watch App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1072DACB1CC7DAA200DF8EA9 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		1072DACD1CC7DAA200DF8EA9 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		1072DACF1CC7DAA200DF8EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1072DAD11CC7DAA200DF8EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		107E49E71CC1AB0000A59A78 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		107E49E91CC1D60C00A59A78 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		107E49EB1CC1D8C000A59A78 /* 1242x2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1242x2208.png; path = AppImages/Launch/1242x2208.png; sourceTree = SOURCE_ROOT; };
@@ -57,6 +116,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1072DAC31CC7DAA200DF8EA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +132,8 @@
 				107E49E91CC1D60C00A59A78 /* Launch Screen.storyboard */,
 				106A79FB1A66D28300D5B9AC /* DDDice */,
 				106A7A111A66D28300D5B9AC /* DDDiceTests */,
+				1072DABB1CC7DAA200DF8EA9 /* DDDice Watch App */,
+				1072DACA1CC7DAA200DF8EA9 /* DDDice Watch App Extension */,
 				106A79FA1A66D28300D5B9AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +143,8 @@
 			children = (
 				106A79F91A66D28300D5B9AC /* DDDice.app */,
 				106A7A0E1A66D28300D5B9AC /* DDDiceTests.xctest */,
+				1072DABA1CC7DAA100DF8EA9 /* DDDice Watch App.app */,
+				1072DAC61CC7DAA200DF8EA9 /* DDDice Watch App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +188,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1072DABB1CC7DAA200DF8EA9 /* DDDice Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				1072DABC1CC7DAA200DF8EA9 /* Interface.storyboard */,
+				1072DABF1CC7DAA200DF8EA9 /* Assets.xcassets */,
+				1072DAC11CC7DAA200DF8EA9 /* Info.plist */,
+			);
+			path = "DDDice Watch App";
+			sourceTree = "<group>";
+		};
+		1072DACA1CC7DAA200DF8EA9 /* DDDice Watch App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1072DACB1CC7DAA200DF8EA9 /* InterfaceController.swift */,
+				10305A881CF3D54700185CCE /* DiceRollController.swift */,
+				1019F3851CF3B0A5009BE767 /* DiceSelectorRow.swift */,
+				1072DACD1CC7DAA200DF8EA9 /* ExtensionDelegate.swift */,
+				1072DACF1CC7DAA200DF8EA9 /* Assets.xcassets */,
+				1072DAD11CC7DAA200DF8EA9 /* Info.plist */,
+			);
+			path = "DDDice Watch App Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,10 +221,12 @@
 				106A79F51A66D28300D5B9AC /* Sources */,
 				106A79F61A66D28300D5B9AC /* Frameworks */,
 				106A79F71A66D28300D5B9AC /* Resources */,
+				1072DADC1CC7DAA200DF8EA9 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1072DAD31CC7DAA200DF8EA9 /* PBXTargetDependency */,
 			);
 			name = DDDice;
 			productName = DDDice;
@@ -156,6 +251,40 @@
 			productReference = 106A7A0E1A66D28300D5B9AC /* DDDiceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1072DAB91CC7DAA100DF8EA9 /* DDDice Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1072DADB1CC7DAA200DF8EA9 /* Build configuration list for PBXNativeTarget "DDDice Watch App" */;
+			buildPhases = (
+				1072DAB81CC7DAA100DF8EA9 /* Resources */,
+				1072DADA1CC7DAA200DF8EA9 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1072DAC91CC7DAA200DF8EA9 /* PBXTargetDependency */,
+			);
+			name = "DDDice Watch App";
+			productName = "DDDice Watch App";
+			productReference = 1072DABA1CC7DAA100DF8EA9 /* DDDice Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1072DAC51CC7DAA200DF8EA9 /* DDDice Watch App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1072DAD91CC7DAA200DF8EA9 /* Build configuration list for PBXNativeTarget "DDDice Watch App Extension" */;
+			buildPhases = (
+				1072DAC21CC7DAA200DF8EA9 /* Sources */,
+				1072DAC31CC7DAA200DF8EA9 /* Frameworks */,
+				1072DAC41CC7DAA200DF8EA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DDDice Watch App Extension";
+			productName = "DDDice Watch App Extension";
+			productReference = 1072DAC61CC7DAA200DF8EA9 /* DDDice Watch App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,7 +292,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Camian;
 				TargetAttributes = {
@@ -174,6 +303,13 @@
 					106A7A0D1A66D28300D5B9AC = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 106A79F81A66D28300D5B9AC;
+					};
+					1072DAB91CC7DAA100DF8EA9 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 99MB6TWRUA;
+					};
+					1072DAC51CC7DAA200DF8EA9 = {
+						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
@@ -192,6 +328,8 @@
 			targets = (
 				106A79F81A66D28300D5B9AC /* DDDice */,
 				106A7A0D1A66D28300D5B9AC /* DDDiceTests */,
+				1072DAB91CC7DAA100DF8EA9 /* DDDice Watch App */,
+				1072DAC51CC7DAA200DF8EA9 /* DDDice Watch App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -216,6 +354,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1072DAB81CC7DAA100DF8EA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1072DAC01CC7DAA200DF8EA9 /* Assets.xcassets in Resources */,
+				1072DABE1CC7DAA200DF8EA9 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1072DAC41CC7DAA200DF8EA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1072DAD01CC7DAA200DF8EA9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -236,6 +391,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1072DAC21CC7DAA200DF8EA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1072DACE1CC7DAA200DF8EA9 /* ExtensionDelegate.swift in Sources */,
+				10305A891CF3D54700185CCE /* DiceRollController.swift in Sources */,
+				1072DACC1CC7DAA200DF8EA9 /* InterfaceController.swift in Sources */,
+				1019F3861CF3B0A5009BE767 /* DiceSelectorRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -243,6 +409,16 @@
 			isa = PBXTargetDependency;
 			target = 106A79F81A66D28300D5B9AC /* DDDice */;
 			targetProxy = 106A7A0F1A66D28300D5B9AC /* PBXContainerItemProxy */;
+		};
+		1072DAC91CC7DAA200DF8EA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1072DAC51CC7DAA200DF8EA9 /* DDDice Watch App Extension */;
+			targetProxy = 1072DAC81CC7DAA200DF8EA9 /* PBXContainerItemProxy */;
+		};
+		1072DAD31CC7DAA200DF8EA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1072DAB91CC7DAA100DF8EA9 /* DDDice Watch App */;
+			targetProxy = 1072DAD21CC7DAA200DF8EA9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -261,6 +437,14 @@
 				106A7A081A66D28300D5B9AC /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		1072DABC1CC7DAA200DF8EA9 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1072DABD1CC7DAA200DF8EA9 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -301,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -337,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -348,8 +532,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cameron Reese (KAWXX33Q5J)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cameron Reese (99MB6TWRUA)";
 				INFOPLIST_FILE = DDDice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rooskierehab.$(PRODUCT_NAME:rfc1034identifier)";
@@ -363,8 +547,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Cameron Reese (KAWXX33Q5J)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cameron Reese (99MB6TWRUA)";
 				INFOPLIST_FILE = DDDice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rooskierehab.$(PRODUCT_NAME:rfc1034identifier)";
@@ -410,6 +594,84 @@
 			};
 			name = Release;
 		};
+		1072DAD51CC7DAA200DF8EA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cameron Reese (99MB6TWRUA)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = DDDice_Watch_App_Extension;
+				INFOPLIST_FILE = "DDDice Watch App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rooskierehab.DDDice.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		1072DAD61CC7DAA200DF8EA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Cameron Reese (99MB6TWRUA)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = DDDice_Watch_App_Extension;
+				INFOPLIST_FILE = "DDDice Watch App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rooskierehab.DDDice.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		1072DAD71CC7DAA200DF8EA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "DDDice Watch App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rooskierehab.DDDice.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		1072DAD81CC7DAA200DF8EA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "DDDice Watch App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rooskierehab.DDDice.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -436,6 +698,24 @@
 			buildConfigurations = (
 				106A7A1C1A66D28300D5B9AC /* Debug */,
 				106A7A1D1A66D28300D5B9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1072DAD91CC7DAA200DF8EA9 /* Build configuration list for PBXNativeTarget "DDDice Watch App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1072DAD71CC7DAA200DF8EA9 /* Debug */,
+				1072DAD81CC7DAA200DF8EA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1072DADB1CC7DAA200DF8EA9 /* Build configuration list for PBXNativeTarget "DDDice Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1072DAD51CC7DAA200DF8EA9 /* Debug */,
+				1072DAD61CC7DAA200DF8EA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
