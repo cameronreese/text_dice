@@ -35,6 +35,6 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        self.pushControllerWithName("RollScreneController", context: nil)
+        self.pushControllerWithName("RollScreneController", context: self.dice[rowIndex])
     }
 }

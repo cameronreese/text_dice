@@ -18,11 +18,15 @@ class DiceRollController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        
+        var diceType = context as! String
+        
+        self.diceRollLabel.setText(diceType)
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
-        self.diceRollLabel.setText("dice type selected")
+
         
         super.willActivate()
     }
