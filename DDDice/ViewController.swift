@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         currentRollDisplayLabel.text = "~"
         logTextBox.text = "--------"
-        logTextBox.editable = false
+        logTextBox.isEditable = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,32 +35,41 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
-    @IBAction func diceButtonPressed(sender: UIButton) {
+    @IBAction func diceButtonPressed(_ sender: UIButton) {
         
         notBreaked = true
         var numberOfDiceSides: Int
         var diceRollResult = 0
         
         // determine which dice button was pressed and change numberOfDiceSides appropriately
-        if (sender.titleLabel?.text == "d3") {
-            numberOfDiceSides = 3 }
-        else if (sender.titleLabel?.text == "d4") {
-            numberOfDiceSides = 4 }
-        else if (sender.titleLabel?.text == "d6") {
-            numberOfDiceSides = 6 }
-        else if (sender.titleLabel?.text == "d8") {
-            numberOfDiceSides = 8 }
-        else if (sender.titleLabel?.text == "d10") {
-            numberOfDiceSides = 10 }
-        else if (sender.titleLabel?.text == "d12") {
-            numberOfDiceSides = 12 }
-        else if (sender.titleLabel?.text == "d20") {
-            numberOfDiceSides = 20 }
-        else if (sender.titleLabel?.text == "d100") {
-            numberOfDiceSides = 100 }
-        else {
-            numberOfDiceSides = 0 }
-        
+        switch sender.titleLabel!.text! {
+        case "d3":
+            numberOfDiceSides = 3
+            break
+        case "d4":
+            numberOfDiceSides = 4
+            break
+        case "d6":
+            numberOfDiceSides = 6
+            break
+        case "d8":
+            numberOfDiceSides = 8
+            break
+        case "d10":
+            numberOfDiceSides = 10
+            break
+        case "d12":
+            numberOfDiceSides = 12
+            break
+        case "d20":
+            numberOfDiceSides = 20
+            break
+        case "d100":
+            numberOfDiceSides = 100
+            break
+        default:
+            numberOfDiceSides = 0
+        }
         
         self.currentRollDisplayLabel.text = String(Int(arc4random_uniform(UInt32(numberOfDiceSides))) + 1)
         
@@ -70,7 +79,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             timeSlice += Double(tick) / (Double(tickEnd) * 2.5)
             
             self.delay(timeSlice, closure: {
-                dispatch_async(dispatch_get_main_queue()){
+                DispatchQueue.main.async{
                     var temp = Int(arc4random_uniform(UInt32(numberOfDiceSides))) + 1
 
                     while temp == diceRollResult {
@@ -106,7 +115,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
 
     // function to clear out the log and main roll display
-    @IBAction func clearLogButtonPressed(sender: UIButton) {
+    @IBAction func clearLogButtonPressed(_ sender: UIButton) {
         notBreaked = false
         runningSum = 0
         currentRollDisplayLabel.text = "~"
@@ -114,7 +123,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         sumLabel.text = "Sum: "
     }
     
-    @IBAction func addBreakInLog(sender: UIButton) {
+    @IBAction func addBreakInLog(_ sender: UIButton) {
         
         runningSum = 0
         
@@ -131,13 +140,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     
     // used to delay the running main thread
-    func delay(delay: Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
+    func delay(_ delay: Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
     
 }

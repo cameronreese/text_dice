@@ -24,8 +24,10 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <imageView alignment="left" id="NWE-YW-7ob"/>
                     </items>
                     <connections>
+                        <outlet property="diceImage" destination="NWE-YW-7ob" id="C8N-nO-9vf"/>
                         <outlet property="diceSelectonTable" destination="bO3-Vr-d6F" id="3uX-Fg-ylz"/>
                     </connections>
                 </controller>
@@ -37,7 +39,7 @@
             <objects>
                 <controller identifier="RollScreneController" id="fKQ-4j-6uX" customClass="DiceRollController" customModule="DDDice_Watch_App_Extension">
                     <items>
-                        <label alignment="left" text="the roll screne" id="2Hb-AA-7dj"/>
+                        <label width="1" height="1" alignment="center" verticalAlignment="center" text="the roll screne" textAlignment="center" id="2Hb-AA-7dj"/>
                     </items>
                     <connections>
                         <outlet property="diceRollLabel" destination="2Hb-AA-7dj" id="BcH-ZE-OKk"/>

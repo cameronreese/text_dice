@@ -14,14 +14,16 @@ class DiceRollController: WKInterfaceController {
     
     @IBOutlet var diceRollLabel: WKInterfaceLabel!
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         // Configure interface objects here.
         
-        var diceType = context as! String
+        let diceType = context as! String
         
-        self.diceRollLabel.setText(diceType)
+        let font = UIFont.systemFont(ofSize: 90)
+        let specialString = NSAttributedString(string: diceType, attributes: [NSFontAttributeName:font])
+        self.diceRollLabel.setAttributedText(specialString)
     }
 
     override func willActivate() {

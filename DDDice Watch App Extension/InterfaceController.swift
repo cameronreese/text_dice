@@ -13,6 +13,7 @@ import Foundation
 class InterfaceController: WKInterfaceController {
 
     @IBOutlet var diceSelectonTable: WKInterfaceTable!
+    @IBOutlet var diceImage: WKInterfaceImage!
 
     var dice = ["d3", "d4", "d6", "d8", "d10", "d12", "d20", "d100"]
     
@@ -21,7 +22,7 @@ class InterfaceController: WKInterfaceController {
          self.diceSelectonTable.setNumberOfRows(self.dice.count, withRowType: "DiceSelectorRow")
         
         for index in 0..<self.dice.count {
-            let diceRow = self.diceSelectonTable.rowControllerAtIndex(index) as! DiceSelectorRow
+            let diceRow = self.diceSelectonTable.rowController(at: index) as! DiceSelectorRow
             diceRow.rowD.setText(self.dice[index])
         
         }
@@ -34,7 +35,7 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        self.pushControllerWithName("RollScreneController", context: self.dice[rowIndex])
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        self.pushController(withName: "RollScreneController", context: self.dice[rowIndex])
     }
 }
