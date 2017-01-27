@@ -42,29 +42,29 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         var diceRollResult = 0
         
         // determine which dice button was pressed and change numberOfDiceSides appropriately
-        switch sender.titleLabel!.text! {
-        case "d3":
+        switch sender.titleLabel?.text {
+        case .some("d3"):
             numberOfDiceSides = 3
             break
-        case "d4":
+        case .some("d4"):
             numberOfDiceSides = 4
             break
-        case "d6":
+        case .some("d6"):
             numberOfDiceSides = 6
             break
-        case "d8":
+        case .some("d8"):
             numberOfDiceSides = 8
             break
-        case "d10":
+        case .some("d10"):
             numberOfDiceSides = 10
             break
-        case "d12":
+        case .some("d12"):
             numberOfDiceSides = 12
             break
-        case "d20":
+        case .some("d20"):
             numberOfDiceSides = 20
             break
-        case "d100":
+        case .some("d100"):
             numberOfDiceSides = 100
             break
         default:
